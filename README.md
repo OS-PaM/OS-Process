@@ -14,7 +14,7 @@
 
 ## 算法扩展
 
-[__scheduler.py](process_schedule/core/scheduler/__scheduler.py)
+[`process_schedule/core/scheduler`](process_schedule/core/scheduler)
 
 ## TODO
 
