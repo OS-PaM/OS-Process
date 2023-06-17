@@ -4,7 +4,7 @@ from abc import ABC as __ABC
 class Scheduler(__ABC):
     from abc import abstractmethod as __abstractmethod
 
-    from ..pcb import PCB as __PCB
+    from .. import PCB as __PCB
 
     @__abstractmethod
     def __call__(self, time: int,
