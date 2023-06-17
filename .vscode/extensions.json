@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "syler.ignore",
+        "vivaxy.vscode-conventional-commits",
+        "njpwerner.autodocstring",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "slightc.pip-manager"
+    ]
+}
