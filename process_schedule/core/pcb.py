@@ -1,7 +1,6 @@
+from dataclasses import dataclass as __dataclass
 from enum import Enum as __Enum
 from enum import unique as __unique
-
-from datclass import dataclass as __dataclass
 
 
 @__unique
