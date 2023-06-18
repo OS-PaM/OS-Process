@@ -1,5 +1,4 @@
 class Timeline:
-    # from pcb import PCB as __PCB
     from . import PCB as __PCB
     from .scheduler import Scheduler as __Scheduler
 
@@ -11,7 +10,6 @@ class Timeline:
 
     def __init__(self, pcb_list: list[__PCB],
                  scheduler: __Scheduler):
-        # TODO: 深拷贝? (可令 pcb_list 多次使用)
         from copy import deepcopy as __deepcopy
 
         self.pcb_list = __deepcopy(pcb_list)
@@ -56,17 +54,19 @@ class Timeline:
 
         self.__finish()
 
-        if len(self.__ready_queue) > 0:
+        if self.__ready_queue:
             # 执行调度算法
             self.__run_time = self.__scheduler(
                 self.time, self.__ready_queue)
-        else:
-            # 跳过空白时间
-            for pcb in self.pcb_list:
-                if pcb.is_none:
-                    self.__run_time = (
-                            pcb.arrive_time - self.time)
-                    break
+
+        # 跳过空白时间
+        for pcb in self.pcb_list:
+            if (pcb.is_none and
+                    pcb.is_arrive(
+                        self.time + self.__run_time)):
+                self.__run_time = (
+                    pcb.arrive_time - self.time)
+                break
 
         # TODO: 返回值优化?
         return self.time, self.pcb_list
