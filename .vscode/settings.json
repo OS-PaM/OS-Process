@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "`core`",
         "`core.timeline`",
-        "`core.pcb`"
+        "`core.pcb`",
+        "`README`"
     ]
 }
