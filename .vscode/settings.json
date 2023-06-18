@@ -3,6 +3,7 @@
         "`core`",
         "`core.timeline`",
         "`core.pcb`",
-        "`README`"
+        "`README`",
+        "`git`"
     ]
 }
