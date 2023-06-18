@@ -59,14 +59,14 @@ class Timeline:
             self.__run_time = self.__scheduler(
                 self.time, self.__ready_queue)
 
-        # 跳过空白时间
+        # 纠正新进程到达时的运行时间 & 跳过空白时间
+        # TODO: 重构到上方的循环中
         for pcb in self.pcb_list:
-            if (pcb.is_none and
-                    pcb.is_arrive(
-                        self.time + self.__run_time)):
+            if (pcb.is_none and (pcb.is_arrive(
+                    self.time + self.__run_time)
+                    or not self.__ready_queue)):
                 self.__run_time = (
                     pcb.arrive_time - self.time)
                 break
 
-        # TODO: 返回值优化?
         return self.time, self.pcb_list
