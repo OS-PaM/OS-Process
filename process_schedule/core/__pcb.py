@@ -17,7 +17,6 @@ class State(__Enum):
 class PCB:
     arrive_time: int
     run_time: int
-    # TODO: -1? None?
     ran_time: int = -1
     pid: int = -1
     start_time: int = -1

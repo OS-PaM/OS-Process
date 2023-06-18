@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "`core`",
-        "`core.timeline`"
+        "`core.timeline`",
+        "`core.pcb`"
     ]
 }
