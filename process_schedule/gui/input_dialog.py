@@ -23,10 +23,6 @@ class in_dialog(QDialog, Ui_Dialog):
         self.enter_button.clicked.connect(self.enter_button_click)
         pass
 
-    def __call__(self, *args, **kwargs):
-        self.pcb_list = []
-        super.__call__()
-
     def next_button_click(self):
         if self.pid != len(self.pcb_list):  # pid 和 pcb_list长度不一致时 证明重新进行了初始化 需要清空
             self.pcb_list = []
