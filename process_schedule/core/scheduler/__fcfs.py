@@ -2,7 +2,7 @@ from .__scheduler import Scheduler as __Scheduler
 
 
 class FCFS(__Scheduler):
-    from ..pcb import PCB as __PCB
+    from .. import PCB as __PCB
 
     def __call__(self, time: int,
                  ready_queue: list[__PCB]):

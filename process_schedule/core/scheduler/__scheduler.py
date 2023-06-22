@@ -4,7 +4,7 @@ from abc import ABC as __ABC
 class Scheduler(__ABC):
     from abc import abstractmethod as __abstractmethod
 
-    from ..pcb import PCB as __PCB
+    from .. import PCB as __PCB
 
     @__abstractmethod
     def __call__(self, time: int,
@@ -22,9 +22,14 @@ class Scheduler(__ABC):
                 + 挂起使用 ``pcb.ready()``, 无需传参
                 + 完成会自动处理
 
-            2. 返回 剩余时间
+            2. 调整 就绪队列
 
-                + 返回 ``pcb.remain_time`` 即可
+                TODO: 封装 调整函数 或 自动调整
+
+            3. 返回 剩余时间
+
+                + 无特殊需求返回 ``pcb.remain_time`` 即可
+                + 特殊需求如 ``RR`` 算法请自行处理
 
         ----
 

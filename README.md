@@ -14,14 +14,14 @@
 
 ## 算法扩展
 
-[__scheduler.py](process_schedule/core/scheduler/__scheduler.py)
+[`process_schedule/core/scheduler`](process_schedule/core/scheduler)
 
 ## TODO
 
 - [x] 框架
   - [x] 时间调度
   - [ ] 注释
-  - [x] 优化
+  - [ ] 优化
   - [ ] 结果可视化
 - [ ] 算法
   - [x] `FCFS`
