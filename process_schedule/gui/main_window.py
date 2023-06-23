@@ -32,6 +32,10 @@ class show_window(QMainWindow, Ui_MainWindow):
         self.change_button.clicked.connect(lambda: self.change_button_push())
         self.pgup_button.clicked.connect(lambda: self.pgup_button_push())
         self.pgdn_button.clicked.connect(lambda: self.pgdn_button_push())
+        self.actionFCFS.triggered.connect(lambda: self.fcfs_menu_push())
+        self.actionSJF.triggered.connect(lambda: self.sjf_menu_push())
+        self.actionSRTN.triggered.connect(lambda: self.srtn_menu_push())
+        self.actionRR.triggered.connect(lambda: self.rr_menu_push())
         self.pc_bar_list.append(self.pc_bar_1)
         self.pc_bar_list.append(self.pc_bar_2)
         self.pc_bar_list.append(self.pc_bar_3)
@@ -99,6 +103,16 @@ class show_window(QMainWindow, Ui_MainWindow):
             self.pgdn_button.setEnabled(True)
 
     def fcfs_menu_push(self):
+        self.scheduler = "fcfs"
+        pass
+    def sjf_menu_push(self):
+        self.scheduler = "sjf"
+        pass
+    def srtn_menu_push(self):
+        self.scheduler = "srtn"
+        pass
+    def rr_menu_push(self):
+        self.scheduler = "rr"
         pass
 
     def clear_all(self):

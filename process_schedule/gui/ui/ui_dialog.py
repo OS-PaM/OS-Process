@@ -56,8 +56,8 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "PID 0"))
-        self.pid_label.setText(_translate("Dialog", "PID 0"))
+        Dialog.setWindowTitle(_translate("Dialog", "按提示输入程序"))
+        self.pid_label.setText(_translate("Dialog", "按 下项 记录程序"))
         self.run_label.setText(_translate("Dialog", "运行时间"))
         self.arr_label.setText(_translate("Dialog", "到达时间"))
         self.enter_button.setText(_translate("Dialog", "确认"))
