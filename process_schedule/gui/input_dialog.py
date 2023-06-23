@@ -36,9 +36,9 @@ class in_dialog(QDialog, Ui_Dialog):
             self.pid = self.pid + 1
             pcb = PCB(int(self.arr_line.text()), int(self.run_line.text()))
             self.pcb_list.append(pcb)
-            self.pid_label.setText("PID " + str(self.pid) + "\t上一项 (" + "PID " + str(self.pid - 1) + ") 已记录")
+            self.pid_label.setText("程序 " + str(self.pid) + "\t上一项 (" + "程序 " + str(self.pid - 1) + ") 已记录")
         else:
-            self.pid_label.setText("PID " + str(self.pid) + "\t内容不能为 Null or 0")
+            self.pid_label.setText("程序 " + str(self.pid) + "\t内容不能为 Null or 0")
             self.setWindowTitle("内容不能为 Null or 0")
         pass
 
