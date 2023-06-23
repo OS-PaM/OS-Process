@@ -1,0 +1,9 @@
+{
+    "conventionalCommits.scopes": [
+        "`core`",
+        "`core.timeline`",
+        "`core.pcb`",
+        "`README`",
+        "`git`"
+    ]
+}

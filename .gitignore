@@ -1,5 +1,3 @@
-__pycache__
-*.log
+**__pycache__
+**.log
 .idea
-.vscode/*
-!.vscode/tasks.json
