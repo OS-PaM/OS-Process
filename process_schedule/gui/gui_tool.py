@@ -1,4 +1,4 @@
-from process_schedule.core.scheduler import SJF, FCFS
+from process_schedule.core.scheduler import SJF, FCFS, SRTN, RR
 
 
 def check_algorithm(string):
@@ -6,6 +6,10 @@ def check_algorithm(string):
         return FCFS()
     if string == "sjf":
         return SJF()
+    if string == "srtn":
+        return SRTN()
+    if string == "rr":
+        return RR()
     pass
 
 
