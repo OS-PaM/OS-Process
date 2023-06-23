@@ -25,6 +25,15 @@ class PCB:
     turnaround_time: int = -1
     state: State = State.NONE
 
+    def __init__(self, arrive_time: int, run_time: int):
+        if arrive_time < 0:
+            raise ValueError(f"arrive_time 为负数: {arrive_time}")
+        if run_time <= 0:
+            raise ValueError(f"run_time 小于或等于 0: {run_time}")
+
+        self.arrive_time = arrive_time
+        self.run_time = run_time
+
     @property
     def remain_time(self):
         return self.run_time - self.ran_time
@@ -32,7 +41,7 @@ class PCB:
     def ready(self, pid=-1):
         self.state = State.READY
 
-        if pid != -1:
+        if pid >= 0 and self.pid < 0:
             self.turnaround_time = 0
             self.ran_time = 0
 
@@ -40,7 +49,7 @@ class PCB:
 
     def run(self, time: int):
         self.state = State.RUNNING
-        if self.start_time == -1:
+        if self.start_time < 0:
             self.start_time = time
         self.last_time = time
         return self.remain_time
